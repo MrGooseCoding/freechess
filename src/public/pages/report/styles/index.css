@@ -1,11 +1,17 @@
 body {
     margin: 0;
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     overflow-x: hidden;
 }
 
 .white {
     color: white;
+}
+
+.container {
+    border-radius: 5px;
+    padding: 15px;
+    background-color: var(--background-color);
 }
 
 @media (min-width: 1000px) and (min-height: 860px) {

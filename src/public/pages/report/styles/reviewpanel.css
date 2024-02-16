@@ -5,10 +5,9 @@
     display: grid;
 
     grid-template-columns: 100%;
+    border-radius: 10px;
 
-    background-color: var(--secondary-color);
-
-    border: 2px solid var(--border-color);
+    background-color: var(--secundary-background-color);
 }
 
 @media (min-width: 1264px) {
@@ -41,11 +40,10 @@
 #review-panel-main {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     height: 100%;
 
-    padding: 10px;
+    padding: 20px;
 }
 
 @media (max-width: 1265px), (max-height: 860px) {
@@ -78,20 +76,30 @@
 #load-type-dropdown {
     text-align: center;
     border-radius: 5px;
-    background-color: var(--border-color);
+    border: none;
+    padding: 5px;
+
+    background-color: var(--background-color);
     color: white;
+}
+
+option {
+    border: none;
+    outline: none;
 }
 
 /*
     PGN INPUT TEXTAREA
 */
 #pgn {
-    width: 90%;
     height: 130px;
     resize: none;
+    padding: 10px;
 
-    border-radius: 10px;
-    background-color: var(--border-color);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    outline: none;
 }
 
 /*
@@ -99,20 +107,20 @@
 */
 #chess-site-username-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 5px;
-
-    width: 90%;
 }
 
 #chess-site-username {
     display: none;
-    width: 100%;
+    width: 90%;
     height: 30px;
 
-    border-radius: 10px;
-    background-color: var(--border-color);
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    outline: none;
 
     resize: none;
     font-size: 16px;
@@ -140,12 +148,6 @@
     padding: 10px 50px;
 
     font-size: 20px;
-
-    text-shadow: 0px 1px 2px black;
-}
-
-#review-button img {
-    filter: drop-shadow(0px 1px 1px black);
 }
 
 /*
@@ -153,15 +155,21 @@
 */
 #depth-slider-container {
     display: flex;
-    justify-content: center;
-    width: 80%;
 }
 
 #depth-slider {
-    width: 70%;
+    color: var(--primary-color);
+    accent-color: var(--success-color);
+    width: 100%;
+}
+
+
+#depth-counter {
+    min-width: 45px;
 }
 
 #depth-message {
+    font-size: 13px;
     margin: 0px;
     text-align: center;
 }
@@ -169,10 +177,16 @@
 /*
     ANALYSIS PROGRESS BAR
 */
-#evaluation-progress-bar {
+#evaluation-bar-container {
+    display: none;
+    margin-top: 15px;
+}
+
+#captcha-container {
     display: none;
     margin-top: 10px;
-    width: 80%;
+    transform: scale(0.9);
+    transition-duration: 0.3s;
 }
 
 /*
@@ -186,12 +200,6 @@
 /*
     RECAPTCHA COMPONENT
 */
-.g-recaptcha {
-    display: none;
-    margin-top: 10px;
-    transform: scale(0.9);
-    transition-duration: 0.3s;
-}
 
 @media (max-width: 1300px) {
     .g-recaptcha {
@@ -232,7 +240,7 @@
 #review-panel-toolbar {
     grid-row: 2 / 3;
 
-    border-top: 2px solid var(--border-color);
+    border-top: 0.5px solid var(--border-color);
 }
 
 #review-panel-toolbar-buttons {

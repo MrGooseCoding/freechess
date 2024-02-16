@@ -1,11 +1,13 @@
 :root {
-    --border-color: rgb(83, 83, 83);
+    --border-color: rgba(255, 255, 255, 0.1);
 
+    --background-color: rgb(48, 46, 43);
+    --secundary-background-color: rgb(38, 37, 34);
     --primary-color: rgb(20, 20, 20);
-    --secondary-color: rgb(26, 26, 26);
+    --secondary-color: var(--primary-color);
 
-    --success-color: rgb(101, 255, 84);
-    --success-color-accent: rgb(91, 229, 75);
+    --success-color: #59A5D8;
+    --success-color-accent: #386FA4;
 }
 
 .center {
@@ -16,6 +18,25 @@
 
 * {
     font-family: system-ui;
+}
+
+.progress-bar-ext {
+    margin-top: 7px;
+    background-color: var(--secundary-background-color);
+    height: 40px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.progress-bar-in {
+    width: 0%;
+    height: 100%;
+    background-color: var(--success-color);
+    transition: all;
+}
+
+.small-text {
+    font-size: 13px;
 }
 
 .std-btn {
